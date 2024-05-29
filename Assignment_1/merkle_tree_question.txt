@@ -1,0 +1,78 @@
+Blockchain Internship Assignment
+Objective:
+Develop a script to generate a Merkle root from a list of transactions, construct a block using specified attributes, mine the block by finding a valid nonce, and verify the block's validity.
+
+Instructions:
+
+Generate Merkle Root:
+
+You will be given a list of transactions.
+Create a function to generate the Merkle root from these transactions.
+
+Construct the Block:
+
+Use the generated Merkle root and given attributes to construct a block.
+The block should include:
+Previous block hash
+Merkle root
+Target value
+Nonce (initially set to 0)
+
+Mine the Block:
+
+Implement a function to mine the block by finding a valid nonce.
+The block is considered mined when its hash is less than the target value.
+
+Verify the Block:
+
+Implement a function to verify the block's validity.
+The block should be verified if:
+The block hash meets the target.
+The block hash is correctly calculated using the block attributes.
+
+
+
+Provided Data:
+
+Transactions:
+
+transactions = [
+    "tx1: Alice -> Bob: 10",
+    "tx2: Bob -> Charlie: 5",
+    "tx3: Charlie -> Dave: 3",
+    "tx4: Dave -> Alice: 1"
+]
+
+Previous Block Hash:
+
+previous_block_hash = "0000000000000000000767f1a45e8d64c90f40a3b4e6e9a0d2b7f5e6bc22fbe5"
+
+
+
+Target:
+
+target = "00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+
+Deliverables:
+
+Script:
+
+The script should include the following functions:
+generate_merkle_root(transactions)
+calculate_hash()
+mine_block()
+verify_block(block)
+
+
+Output:
+
+Print the Merkle root.
+Print the block hash and nonce after mining.
+Print the result of block verification.
+
+Evaluation:
+
+Correct implementation of the Merkle root generation.
+Proper block construction and mining.
+Accurate block verification.
+Code readability and comments
