@@ -1,0 +1,55 @@
+The solution to this question is stored in "https://github.com/RishabhAnand1/blockchain/codes/PatientRecords.sol"
+
+Assignment: Developing a Smart Contract for Patient Records Storage
+Objective:
+In this assignment, you will develop a Solidity smart contract to manage patient records on the Ethereum blockchain. The contract will store patient information in separate arrays without using structures. You will implement functions to add new patient records, retrieve existing records, and get the total number of patients.
+
+Requirements:
+Smart Contract Structure:
+
+The contract should be named PatientRecords.
+Use separate arrays to store the following patient details:
+uint[] ids: Array to store patient IDs.
+string[] names: Array to store patient names.
+uint[] ages: Array to store patient ages.
+string[] genders: Array to store patient genders.
+string[] medicalHistories: Array to store patient medical histories.
+Implement a mapping mapping(uint => uint) idToIndex to track the indices of patient IDs.
+Functions:
+
+addPatient:
+
+Purpose: Adds a new patient record to the arrays.
+Arguments:
+uint _id: The unique ID of the patient.
+string memory _name: The name of the patient.
+uint _age: The age of the patient.
+string memory _gender: The gender of the patient.
+string memory _medicalHistory: The medical history of the patient.
+Returns:
+bool success: A boolean indicating whether the record was added successfully.
+Functionality:
+Ensure the patient ID is unique before adding the record by checking idToIndex.
+If the ID is unique, add the patient's details to the respective arrays and update the idToIndex mapping.
+getPatient:
+
+Purpose: Retrieves a patient's information by their ID.
+Arguments:
+uint _id: The ID of the patient to retrieve.
+Returns:
+uint id: The ID of the patient.
+string memory name: The name of the patient.
+uint age: The age of the patient.
+string memory gender: The gender of the patient.
+string memory medicalHistory: The medical history of the patient.
+Functionality:
+Ensure the patient exists by checking idToIndex.
+Retrieve the patient's details using the index from idToIndex.
+getPatientCount:
+
+Purpose: Returns the total number of patients stored.
+Arguments: None.
+Returns:
+uint: The total number of patients.
+Functionality:
+Return the length of the ids array.
